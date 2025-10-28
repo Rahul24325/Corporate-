@@ -6,7 +6,7 @@ import os
 from keep_alive import keep_alive
 from flask import Flask, request
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
+BOT_TOKEN = os.environ.get('8325375868:AAEAvYZK_QqdYiF8R3ilgRdKRuXBzEwO78Y')
 
 if not BOT_TOKEN:
     print("❌ ERROR: BOT_TOKEN not found in environment variables!")
