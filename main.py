@@ -1,3 +1,5 @@
+import os
+print("DEBUG — BOT_TOKEN is:", os.environ.get("BOT_TOKEN"))
 import telebot
 from telebot import types
 import time
