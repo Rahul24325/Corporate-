@@ -57,30 +57,58 @@ def handle_option_selection(call):
     user_id = call.from_user.id
     
     responses = {
-        "option_account": (
-            f"🎯 {user_mention} (ID: {user_id})\n\n"
-            "💎 VIP Account service ke liye please contact karo:\n"
-            "👉 @Ghost_Commander\n\n"
-            "🔥 Best deals aur instant setup ke liye DM karo!"
-        ),
-        "option_panel": (
-            f"🎯 {user_mention} (ID: {user_id})\n\n"
-            "🔧 Panel service ke liye please contact karo:\n"
-            "👉 @Ghost_Commander\n\n"
-            "💼 Best panel deals ke liye DM karo!"
-        ),
-        "option_mediator": (
-            f"🎯 {user_mention} (ID: {user_id})\n\n"
-            "🤝 Mediator ke liye please contact karo:\n"
-            "👉 @Ghost_Commander\n\n"
-            "💰 Partnership ke liye DM karo!"
-        ),
-        "option_none": (
-            f"✅ Thanks {user_mention}!\n\n"
-            "📢 Aap hamare channel me active reh sakte ho updates ke liye:\n"
-            "👉 @MoneyMatrix_Biz"
-        )
-    }
+    "option_account": (
+        f"🎯 {user_mention} (ID: {user_id})\n\n"
+        "💎 VIP Account Service — Contact: @Ghost_Commander\n\n"
+        "📋 *Provide Account Details in Safe Format:*\n"
+        "• Account Name: <Alias>\n"
+        "• Bank Name: <Bank>\n"
+        "• Limit: <Daily/Monthly Limit>\n"
+        "• Account Type: <Current/Savings>\n"
+        "• Availability: <Yes/No>\n"
+        "• Contact (Telegram): @your_username\n"
+        "• Notes: <Extra info / verified status>\n\n"
+        "🚫 *Do not share sensitive info like PIN, full A/C no, passwords, Aadhaar, or PAN publicly.*\n"
+        "🔒 For verified & private checks, DM @Ghost_Commander."
+    ),
+    
+    "option_panel": (
+        f"🎯 {user_mention} (ID: {user_id})\n\n"
+        "🔧 Panel Service — Contact: @Ghost_Commander\n\n"
+        "📋 *Provide Panel Details:*\n"
+        "• Panel Name / Brand: <Name>\n"
+        "• Features: <List Features>\n"
+        "• Access Type: <Web/App>\n"
+        "• Price / Rent: <Amount>\n"
+        "• Availability: <Yes/No>\n"
+        "• Contact (Telegram): @your_username\n"
+        "• Notes: <Demo/Verification Info>\n\n"
+        "⚠️ *Never post login credentials or admin passwords publicly.*\n"
+        "🔒 Verified access process — DM @Ghost_Commander."
+    ),
+    
+    "option_mediator": (
+        f"🎯 {user_mention} (ID: {user_id})\n\n"
+        "🤝 Mediator Service — Contact: @Ghost_Commander\n\n"
+        "📋 *Mediator Info:*\n"
+        "• Mediator Name / Alias: <Name>\n"
+        "• Region / City: <Location>\n"
+        "• Commission: <Percentage / Fixed>\n"
+        "• Services: <What you handle>\n"
+        "• Contact (Telegram): @your_username\n"
+        "• Notes: <Preferred mode / trust level>\n\n"
+        "💬 Ek pyar bhara aur dangerous message ❤️⚠️:\n"
+        "👉 Scam mat karo mere kisi bhi member ke sath 🙏\n"
+        "👉 Aap bhi kamao aur dusron ko bhi kamane do 💸\n"
+        "Safe aur verified deal hi karo 🔐"
+    ),
+    
+    "option_none": (
+        f"✅ Thanks {user_mention}!\n\n"
+        "📢 Aap hamare channel me active reh sakte ho updates ke liye:\n"
+        "👉 @MoneyMatrix_Biz"
+    )
+}
     
     response_text = responses.get(call.data, "❌ Invalid option")
     bot.answer_callback_query(call.id)
@@ -231,3 +259,4 @@ if __name__ == "__main__":
         print("Retrying in 5 seconds...")
         time.sleep(5)
         bot.infinity_polling(timeout=60, long_polling_timeout=60, skip_pending=True)
+        
