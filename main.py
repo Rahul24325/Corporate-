@@ -6,7 +6,7 @@ import os
 from keep_alive import keep_alive
 from flask import Flask, request
 
-BOT_TOKEN = "8325375868:AAEAvYZK_QqdYiF8R3ilgRdKRuXBzEwO78Y"
+BOT_TOKEN = "8495012847:AAFva442wvLcaATac-KL5VNH3-yPKqD3iXo"
 
 if not BOT_TOKEN:
     print("❌ ERROR: BOT_TOKEN not found in environment variables!")
@@ -57,7 +57,7 @@ def handle_option_selection(call):
     user_id = call.from_user.id
     
     responses = {
-    "option_holder": (
+    "option_account": (
         f"🎯 {user_mention} (ID: {user_id})\n\n"
         "💎 VIP Account Service — Contact: @Ghost_Commander\n\n"
         "📋 *Provide Account Details in Safe Format:*\n"
